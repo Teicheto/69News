@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>69 News - Начало</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff5e6;
+            color: #333;
+        }
+        header {
+            background-color: #ff9933;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #ff6600;
+            padding: 10px 0;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 10px;
+        }
+        .news {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .news-item {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .news-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .news-item h3 {
+            margin: 10px;
+            font-size: 1.2em;
+        }
+        .news-item p {
+            margin: 10px;
+            font-size: 0.9em;
+            color: #555;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #ff6600;
+            color: #fff;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>69 News - Смях без граници</h1>
+    </header>
+    <nav>
+        <a href="home.html">Начало</a>
+        <a href="about.html">За нас</a>
+        <a href="contacts.html">Контакти</a>
+    </nav>
+    <div class="container">
+        <h2>Последни новини</h2>
+        <div class="news">
+            <div class="news-item">
+                <img src="https://via.placeholder.com/300x200" alt="Funny News">
+                <h3>Невероятно: Куче кара колело!</h3>
+                <p>Жителите на малък град бяха изненадани от куче, което обикаля града с велосипед. Това е най-смешното събитие на седмицата!</p>
+            </div>
+            <div class="news-item">
+                <img src="https://via.placeholder.com/300x200" alt="Funny News">
+                <h3>Робот реши да стане готвач</h3>
+                <p>Технологиите са впечатляващи, но този робот не е сигурен какво е "сол" и какво е "захар". Клиентите са в истерия.</p>
+            </div>
+            <div class="news-item">
+                <img src="https://via.placeholder.com/300x200" alt="Funny News">
+                <h3>Мъж направи най-дългия сандвич</h3>
+                <p>Дължината на сандвича впечатли местните жители, а после всички го изядоха за минути.</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 69 News. Всички права запазени.</p>
+    </footer>
+</body>
+</html>
