@@ -1,10 +1,9 @@
-<!-- contacts.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>69 News - Контакти</title>
+    <title>69 News - Начало</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -35,12 +34,35 @@
             text-decoration: underline;
         }
         .container {
-            max-width: 800px;
+            max-width: 1200px;
             margin: 20px auto;
             padding: 10px;
+        }
+        .news {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .news-item {
             background: #fff;
+            border: 1px solid #ddd;
             border-radius: 8px;
+            overflow: hidden;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .news-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .news-item h3 {
+            margin: 10px;
+            font-size: 1.2em;
+        }
+        .news-item p {
+            margin: 10px;
+            font-size: 0.9em;
+            color: #555;
         }
         footer {
             text-align: center;
@@ -53,7 +75,7 @@
 </head>
 <body>
     <header>
-        <h1>69 News - Контакти</h1>
+        <h1>69 News - Начало</h1>
     </header>
     <nav>
         <a href="home.html">Начало</a>
@@ -61,14 +83,38 @@
         <a href="contacts.html">Контакти</a>
     </nav>
     <div class="container">
-        <h2>Свържете се с нас</h2>
-        <p>Имате въпроси или искате да споделите нещо? Свържете се с нас чрез следните канали:</p>
-        <ul>
-            <li>Имейл: contact@69news.com</li>
-            <li>Телефон: +359 123 456 789</li>
-            <li>Адрес: София, ул. Смешна 69</li>
-        </ul>
+        <section class="contact">
+            <h1>Свържете се с нас</h1>
+            <p>Ако имате въпроси или предложения, не се колебайте да ни пишете на:</p>
+            <p><strong>Нашият имейл: <a href="mailto:69newsbg@gmail.com">69newsbg@gmail.com</a></strong></p>
+          </section>
     </div>
+
+    <div id="fallingElements"></div>
+    <script>
+       function createFallingElement() {
+          const element = document.createElement("div");
+          element.innerText = "❄️";
+          element.style.position = "fixed";
+          element.style.left = Math.random() * window.innerWidth + "px";
+          element.style.top = "-50px";
+          element.style.fontSize = Math.random() * 20 + 10 + "px";
+          element.style.animation = "fall " + (Math.random() * 3 + 2) + "s linear infinite";
+          document.getElementById("fallingElements").appendChild(element);
+    
+          // Премахва снежинката, когато падне извън екрана
+          setTimeout(() => element.remove(), 5000);
+       }
+       
+       // Намали честотата на създаване на снежинки
+       setInterval(createFallingElement, 500);
+    </script>
+    <style>
+       @keyframes fall {
+          to { transform: translateY(100vh); }
+       }
+    </style>
+
     <footer>
         <p>&copy; 2024 69 News. Всички права запазени.</p>
     </footer>

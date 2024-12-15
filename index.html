@@ -75,7 +75,7 @@
 </head>
 <body>
     <header>
-        <h1>69 News - Смях без граници</h1>
+        <h1>69 News - Начало</h1>
     </header>
     <nav>
         <a href="home.html">Начало</a>
@@ -102,6 +102,32 @@
             </div>
         </div>
     </div>
+
+    <div id="fallingElements"></div>
+    <script>
+       function createFallingElement() {
+          const element = document.createElement("div");
+          element.innerText = "❄️";
+          element.style.position = "fixed";
+          element.style.left = Math.random() * window.innerWidth + "px";
+          element.style.top = "-50px";
+          element.style.fontSize = Math.random() * 20 + 10 + "px";
+          element.style.animation = "fall " + (Math.random() * 3 + 2) + "s linear infinite";
+          document.getElementById("fallingElements").appendChild(element);
+    
+          // Премахва снежинката, когато падне извън екрана
+          setTimeout(() => element.remove(), 5000);
+       }
+       
+       // Намали честотата на създаване на снежинки
+       setInterval(createFallingElement, 500);
+    </script>
+    <style>
+       @keyframes fall {
+          to { transform: translateY(100vh); }
+       }
+    </style>
+
     <footer>
         <p>&copy; 2024 69 News. Всички права запазени.</p>
     </footer>
